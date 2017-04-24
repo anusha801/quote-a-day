@@ -6,6 +6,6 @@ app.get('/', function (request, response) {
 });
 
 
-var server = app.listen(process.env.PORT || 8082), function (request, response) {
+var server = app.listen((process.env.PORT || 8082), function (request, response) {
     console.log("listening to port", port);
 });
