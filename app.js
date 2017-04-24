@@ -4,8 +4,8 @@ app.use(express.static(__dirname + '/scripts'));
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/view/index.html');
 });
-var port =8089;
 
-var server = app.listen(port, function (request, response) {
+
+var server = app.listen(process.env.PORT || 8082), function (request, response) {
     console.log("listening to port", port);
 });
